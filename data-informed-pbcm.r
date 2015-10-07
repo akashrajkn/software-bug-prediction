@@ -10,6 +10,7 @@
 library("boot")
 library("MASS")
 library("fitdistrplus")
+library("actuar")
 
 
 #load data
@@ -51,13 +52,14 @@ generated_data_nonnull_rows = generated_data[generated_data > 0]
 
 #model A = weibull
 fitWeibull = fitdist(generated_data_nonnull_rows, "weibull")
-
 #mle parameters after weibull is fit into the generated data
 mleParamsA = c(fitWeibull$estimate["shape"], fitWeibull$estimate["scale"])
 
+fitPareto = fitdist(generated_data_nonnull_rows, "pareto", start = list(shape = 1, scale = 500))
+mleParamsB = c(fitPareto$estimate)
+
 
 #step 3: Apply parametric bootstrap to both models
-
 
 #pBootFunction = function(d, mle)
 #{
@@ -69,8 +71,18 @@ mleParamsA = c(fitWeibull$estimate["shape"], fitWeibull$estimate["scale"])
 #pbootstrap = boot(generated_data_nonnull_rows, statFunction, R = 2, sim = "parametric", ran.gen = pBootFunction, mle = mleParamsA)
 #pValues = boot.array(pbootstrap, indices = T)
 
+generated_data_A = rweibull(length(generated_data_nonnull_rows), fitWeibull$estimate["shape"], fitWeibull$estimate["scale"])
+generated_data_A = sort(generated_data_A, decreasing = T) #generated_data_A = sort(ceiling(generated_data_A), decreasing = T)
+
+generated_data_B = rpareto(length(generated_data_nonnull_rows), fitPareto$estimate["shape"], fitPareto$estimate["scale"])
+generated_data_B = sort(generated_data_B, decreasing = T) #generated_data_B = sort(ceiling(generated_data_B), decreasing = T)
 
 
+#step 4: cross fitting of models (with each other's generated data)
+
+#fit models A and B with generated_data_A
+cross_fit_A_A <- fitdist(generated_data_A, "weibull")
+cross_fit_A_B <- fitdist(generated_data_A, "pareto", start = list(shape = 1, scale = 500))
 
 
 
