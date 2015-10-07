@@ -84,8 +84,9 @@ generated_data_B = sort(generated_data_B, decreasing = T) #generated_data_B = so
 cross_fit_A_A <- fitdist(generated_data_A, "weibull")
 cross_fit_A_B <- fitdist(generated_data_A, "pareto", start = list(shape = 1, scale = 500))
 
-
-
+#fit models A and B with generated_data_B
+cross_fit_B_A <- fitdist(generated_data_B, "weibull")
+cross_fit_B_B <- fitdist(generated_data_B, "pareto", start = list(shape = 1, scale = 500))
 
 
 
