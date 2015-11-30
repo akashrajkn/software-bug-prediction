@@ -1,0 +1,18 @@
+
+
+features_CM1 = data_CM1_train(:,(1:37));
+classLabels = data_CM1_train(:,38);
+
+numTrees = 20;
+
+B = TreeBagger(numTrees, features, classLabels, 'Method', 'classification');
+
+newData1 = data_CM1_validate(1, (1:37));
+
+predChar1 = B.predict(newData1);
+
+predictedClass = str2double(predChar1);
+
+
+
+
