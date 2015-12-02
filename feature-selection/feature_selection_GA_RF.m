@@ -1,29 +1,20 @@
 
 %% genetic algorithm
 
-opts = gaoptimset('PopulationType', 'bitstring');
+%clear all;
 
-numberOfVariables = 38;
+global iteration;
+
+iteration = 0;
+
+%data_initialize;
+
+opts = gaoptimset('PopulationType', 'bitstring', 'Generations', 100, 'PopulationSize', 200, 'EliteCount', 50);
+
+numberOfVariables = 37;
 FitnessFunc = @fitnessFunction;
 
-[x, Fval, exitFlag, Output, Population] = ga(FitnessFunc,numberOfVariables,[],[],[],[],[],[],[],opts);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[x1, Fval, exitFlag, Output, Population] = ga(FitnessFunc,numberOfVariables,[],[],[],[],[],[],[],opts);
 
 
 
