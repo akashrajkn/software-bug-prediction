@@ -14,15 +14,20 @@
  - Teaching Assistant
 
 
-
-
-tyro in computer science
-
+<intro>
+machine learning - how and where its used
+</intro>
 
 
 It was only during my freshman year I interacted with a computer at length. I was mesmerized by the sophistication it took to make it, let alone imagine the intricate electronics that went in making it. The course on introductory computer programming was what (epoch-making) steered me towards the realm of computer science. My naive curiosity as to how computer games are made with such brilliance sparked my interest towards algorithm development. Wishing to explore more in this area, I started coding a lot and learnt a glut of algorithms. 
 
-The interest in algorithm development made me work on a project where I learnt about the approximation algorithms and later went on to complete a detailed analyses of approximation algorithms for vertex cover problem on Eulerian graphs. The analyses clearly proved that something more was required when dealing with non-planar graphs. Under the guidance of Dr. Michael Alphonse, I explored the possibility of 
+The interest in algorithm development made me work on a project where I learnt about the approximation algorithms and later went on to complete a detailed analyses of approximation algorithms for vertex cover problem on Eulerian graphs. The analyses clearly proved that something more was required when dealing with non-planar graphs. Under the guidance of Dr. Michael Alphonse, I explored the possibility of reducing the graph size to solve the dominating set problem. An approach similar to the dimensionality reduction was studied upon and modelled to achieve better results. My performance in courses like introduction to data structures and algorithm, parallel computing and design and analysis of algorithms influenced me to put more effort into my projects. My interest in algorithm development was compounded by the Student Mentorship Program, a platform where students volunteer to introduce mentees new fields of study that they are well-versed in, and 'crux', the coding club.
+
+Having reaped the benefits of the different platforms, I later joined the club as a mentor to teach algorithms to a small group of freshmen. I am also currently a Teaching Assitant for the course Discrete Structures for Computer Science. Conducting weekly assignments and hackathons on the concepts covered in the course is an engaging experience and it made me realize that explaining concepts to others made me understand them better.
+
+My initial exposure to the machine learning world was through the course on probability and statistics. My naive curiosity led me to explore applications of bayesian theorem on decision making. I remember being mesmerized by its widespread applications in designing intelligent applications. My naive curiosity led me to develop a simple, intelligent solver using a breadth first search with heuristics for the 2048 game. Pursuing this interest, I completed courses in Machine learning and data mining with flying colors. During this time, I became conscious of my deep-rooted interest in finding patterns and building applications that made decisions. I, then worked on a projecte with Prof. Y. Yoganandam on using machine learning techniques in cognitive radio. The ultimate aim of this project was to address the long-term prediction of whitespaces (wireless transmissions) problem. After trying out many frequency domain prediction methods with little success, I came up with a two-tiered prediction model (involving a central and local predictor). The wireless transmissions were broken down to a sum of periodic and non-periodic (random) transmissions. These problems were solved separately by using a modified version of autocorrealation at one tier and neural networks on another. The model was tested on real wireless data and it was highly accurate in predicting future transmissions while being adaptable to changes in periodic transmissions. 
+
+
 
 
 
