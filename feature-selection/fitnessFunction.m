@@ -37,6 +37,6 @@ function output_fitness_value = fitnessFunction( input_population )
     
     [x,y,t,auc] = perfcurve(validate_class_labels, score(:, 2), '1');
     
-    output_fitness_value = auc;
+    output_fitness_value = -auc;
     
 end
