@@ -29,7 +29,7 @@ function output_fitness_value = fitnessFunction( input_population )
     
     validate_class_labels(:,1) = data_CM1_validate(:, size_CM_validate(2));
 
-    numTrees = 100;
+    numTrees = 1000;
     
     B = TreeBagger(numTrees, features_subset, class_labels, 'Method', 'classification');
     
