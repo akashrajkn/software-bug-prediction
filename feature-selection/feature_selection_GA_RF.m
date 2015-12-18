@@ -11,7 +11,7 @@ iteration = 0;
 
 opts = gaoptimset('PopulationType', 'bitstring', 'Generations', 100, 'PopulationSize', 200, 'EliteCount', 50);
 
-numberOfVariables = 37;
+numberOfVariables = size(data_CM1,2)-1;
 FitnessFunc = @fitnessFunction;
 
 [x1, Fval, exitFlag, Output, Population] = ga(FitnessFunc,numberOfVariables,[],[],[],[],[],[],[],opts);
